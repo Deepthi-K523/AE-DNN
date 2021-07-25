@@ -361,8 +361,6 @@ def DeepCDA():
     mean_tpr[-1] = 1.0
     mean_auc = auc(mean_fpr, mean_tpr)
     
-    
-    
        
     pyplot.plot(mean_fpr, mean_tpr,'--' ,linewidth=2.5,label='Mean ROC (AUC = %0.4f)' % mean_auc)
     pyplot.legend()
@@ -371,9 +369,6 @@ def DeepCDA():
     pyplot.show()
     
     
-    
-    
-    print('*******AUTO-RF*****')   
     print ('mean performance of AE-DNN ')
     print (np.mean(np.array(all_performance_DNN), axis=0))
     Mean_Result=[]
