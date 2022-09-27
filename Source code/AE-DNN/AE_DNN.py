@@ -306,13 +306,12 @@ def DeepCDA():
              
         model_DNN = DNN()
         
-         #encoder,encoder_imgs=DNN_auto(prefilter_train)
-        
+               
         #print(encoder.shape)
         print(X_data1.shape)
         #print(X_data2.shape)
        
-#        
+        
         train_label_new_forDNN = np.array([[0,1] if i == 1 else [1,0] for i in train_label_new])
         print (train_label_new_forDNN[0])
        
