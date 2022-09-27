@@ -49,12 +49,10 @@ def prepare_data(seperate=False):
     print ("loading data")
     
     
-    
     disease_fea = np.loadtxt("integrated-disease similarity.txt",dtype=float,delimiter=",")
     circRNA_fea  = np.loadtxt("integrated-cRNA similarity.txt",dtype=float,delimiter=",")
     interaction = np.loadtxt("interaction.txt",dtype=int,delimiter=",")
-   
-       
+         
                       
     
     link_number = 0
