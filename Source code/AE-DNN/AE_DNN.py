@@ -1,6 +1,4 @@
 
-
-
 import numpy as np
 import os
 from matplotlib import pyplot
@@ -56,9 +54,8 @@ def prepare_data(seperate=False):
     circRNA_fea  = np.loadtxt("integrated-cRNA similarity.txt",dtype=float,delimiter=",")
     interaction = np.loadtxt("interaction.txt",dtype=int,delimiter=",")
    
-    
-   
-                        
+       
+                      
     
     link_number = 0
     #nonlink_number=0
@@ -153,8 +150,8 @@ def transfer_array_format(data):    #data=X  , X= all the miRNA features, diseas
     #pdb.set_trace()
     for val in data:
         #formated_matrix1.append(np.array([val[0]]))
-        formated_matrix1.append(val[0])   #contains miRNA features ?
-        formated_matrix2.append(val[1])   #contains disease features ?
+        formated_matrix1.append(val[0])   #contains miRNA features 
+        formated_matrix2.append(val[1])   #contains disease features
         #formated_matrix1[0] = np.array([val[0]])
         #formated_matrix2.append(np.array([val[1]]))
         #formated_matrix2[0] = val[1]      
@@ -216,7 +213,7 @@ def DNN_auto(x_train):
 
     autoencoder.compile(optimizer='adam', loss='mse')
 
-    autoencoder.fit(x_train, x_train,epochs=20,batch_size=100,shuffle=True)  # second x_train is given instead of train labels in DNN, ie here, i/p=o/p
+    autoencoder.fit(x_train, x_train,epochs=20,batch_size=100,shuffle=True)  # second x_train is given instead of train labels in DNN, ie, i/p = o/p
 
 
     encoded_imgs = encoder.predict(x_train)
